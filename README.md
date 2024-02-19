@@ -12,6 +12,9 @@ supports getting the boilerplate start up out of the way quickly.
 
 Use `compile_shaders.py` to build your shader binaries.
 
+The current SPIRV compiler is linux only.  You can download the compiler for other platforms.
+Already compiled shaders are added for cross-platform.
+
 ## License
 This project is licensed under the zlib license - see the [LICENSE](LICENSE) file for details.
 © All rights reserved.

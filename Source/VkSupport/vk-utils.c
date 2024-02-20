@@ -340,7 +340,23 @@ VkSemaphore vk_utils_create_semaphore(VkDevice device)
     return semaphore;
 }
 
-
+VkBool32 vk_utils_fence_signaled
+(
+    VkDevice       in_device, 
+    VkFence        in_fence,
+    VkBool32       in_reset
+)
+{
+    const VkResult status = vkGetFenceStatus(in_device, in_fence);
+    assert(VK_ERROR_DEVICE_LOST != status);
+    if(VK_SUCCESS == status)
+    {
+        if(in_reset) vkResetFences(in_device, 1, &in_fence);
+        return VK_TRUE;
+    }
+    
+    return VK_FALSE;
+}
 
 
 

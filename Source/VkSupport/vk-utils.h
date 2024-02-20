@@ -47,6 +47,13 @@ uint32_t vk_utils_get_file_size(FILE* fp);
 VkSemaphore vk_utils_create_semaphore(VkDevice device);
 VkFence vk_utils_create_fence(VkDevice device);
 
+VkBool32 vk_utils_fence_signaled
+(
+    VkDevice       in_device, 
+    VkFence        in_fence,
+    VkBool32       in_reset
+);
+
 #ifdef __cplusplus
 }
 #endif

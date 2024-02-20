@@ -54,6 +54,8 @@ VkBool32 vk_utils_fence_signaled
     VkBool32       in_reset
 );
 
+const char* vk_utils_result_string(VkResult res) ;
+
 #ifdef __cplusplus
 }
 #endif
